@@ -14,9 +14,56 @@
     margin-top: 8px;
     vertical-align: middle;
     width: 100%;
+    opacity: 1;
+    transition: .5s ease;
+    backface-visibility: hidden;
 }
 
-/* responsive layout */
+.portfolio-item {
+    position: relative;
+    width: 100%;
+    max-width: 400px;
+  }
+
+.portfolio-item .overlay {
+    position: absolute;
+    top:0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: .3s ease;
+    background-color: orange;
+  }
+
+.portfolio-item:hover .overlay {
+    opacity: 0.7;
+    
+}
+.icon {
+    color: white;
+    font-size: 100px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    text-align: center;
+    opacity: 100%;
+  }
+  .icon:hover {
+  cursor: pointer;
+  }
+  .fa-user:hover {
+    color: #eee;
+  }
+
+
+  
+
+/* responsive layout - makes a two column-layout instead of four columns */
 
 @media screen and (max-width:800px) {
     .column{
@@ -25,9 +72,12 @@
     }
 }
 
+/* makes the two columns stack on top of each other instead of next to each other  */
+
 @media screen and (max-width:600px) {
     .column{
         flex:100%;
         max-width: 100%;
     }
 }
+
