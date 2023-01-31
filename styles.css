@@ -23,6 +23,10 @@
     position: relative;
     width: 100%;
     max-width: 400px;
+    padding-top: 4;
+    padding-left: 4;
+    padding-right: 4;
+    padding-bottom: 4;
   }
 
 .portfolio-item .overlay {
@@ -35,14 +39,10 @@
     width: 100%;
     opacity: 0;
     transition: .3s ease;
-    background-color: orange;
+    background-color: rgb(255, 255, 255);
   }
 
-.portfolio-item:hover .overlay {
-    opacity: 0.7;
-    
-}
-.icon {
+/* .portfolio-item:hover .overlay {
     color: white;
     font-size: 100px;
     position: absolute;
@@ -52,15 +52,21 @@
     -ms-transform: translate(-50%, -50%);
     text-align: center;
     opacity: 100%;
-  }
-  .icon:hover {
-  cursor: pointer;
-  }
-  .fa-user:hover {
-    color: #eee;
-  }
+    
+} */
 
-
+.portfolio-item .overlay:hover{
+    opacity: 0.65 ;
+    cursor: pointer;
+    transition: 0.5s all ease-in-out;
+}
+.portfolio-item:hover{
+    
+    -ms-transform: scale(1.05);
+    -webkit-transform: scale(1.05);
+    transform: scale(1.05); 
+    transition: 0.5s all ease-in-out;
+}
   
 
 /* responsive layout - makes a two column-layout instead of four columns */
@@ -81,3 +87,12 @@
     }
 }
 
+
+.portfolio-modal .btn-close {
+    color: #000000;
+    font-size: medium;
+    padding: 1rem;
+  }
+  .portfolio-modal .btn{
+    border-color: rgb(39, 37, 37);
+  }
